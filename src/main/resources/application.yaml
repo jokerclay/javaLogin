@@ -19,7 +19,7 @@ spring:
 
   mail:
     host: localhost
-    port: 1025
+    port: 1026
     username: hello
     password: hello
 
