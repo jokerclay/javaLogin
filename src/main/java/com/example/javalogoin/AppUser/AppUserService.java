@@ -57,4 +57,10 @@ public class AppUserService implements UserDetailsService {
         // 返回 token
        return token;
     }
+
+    public int enableAppUser(String email) {
+        return appUserRepository.enableAppUser(email);
+    }
+
+
 }

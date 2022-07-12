@@ -1,10 +1,7 @@
 package com.example.javalogoin.registration;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/registration")
@@ -18,6 +15,11 @@ public class RegistrationController {
         return registrationService.register(request);
     }
     // check if the  email is valid
+
+    @GetMapping("/confirm")
+    public String Confirm(@RequestParam String token) {
+        return registrationService.confirmToken(token);
+    }
 
 
 
